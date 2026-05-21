@@ -291,7 +291,7 @@ export default function PortfolioPage() {
               viewport={{ once: true }}
               className="mb-3 inline-flex items-center rounded-full border border-emeraldAccent/30 bg-emeraldAccent/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-emerald-300"
             >
-              Open for Global Remote Opportunities
+              Bridging Software Engineering and Machine Learning to Develop Intelligent and Reliable Systems
             </motion.p>
 
             <motion.h1
