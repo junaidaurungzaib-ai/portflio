@@ -344,8 +344,8 @@ export default function PortfolioPage() {
               </button>
 
               <a
-                href="/Junaid_Aurungzaib_CV.pdf"
-                download="Junaid_Aurungzaib_CV.pdf"
+                href="/Junaid_Cv_new_2025.pdf"
+                download="Junaid_Cv_new_2025.pdf"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-slate-100 transition hover:bg-white/10"
               >
                 Download CV
@@ -672,7 +672,7 @@ export default function PortfolioPage() {
             <div>
               <h2 className="section-title">Contact</h2>
               <p className="mt-3 max-w-md text-slate-300">
-                Available for remote machine learning, computer vision, full-stack software, and technical collaboration opportunities with international teams and academic committees.
+                Open to global collaborations in machine learning, computer vision, and full-stack software engineering, with an emphasis on measurable product impact and technical leadership.
               </p>
 
               <div className="mt-6 space-y-3 text-sm text-slate-300">
