@@ -11,7 +11,7 @@ import {
   Phone,
   X
 } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import {
   navItems,
   profile,
@@ -24,7 +24,7 @@ import {
 } from "@/data/portfolioData";
 
 const filterOptions = ["All", "Web Apps", "AI/ML", "Mobile"] as const;
-const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = "ba4bd78b-94e2-44cb-849d-5aaee91fb2e8";
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 type FilterOption = (typeof filterOptions)[number];
@@ -56,6 +56,7 @@ export default function PortfolioPage() {
   const [formErrors, setFormErrors] = useState<Partial<FormState>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitState, setSubmitState] = useState<"idle" | "success" | "error">("idle");
+  const [resultMessage, setResultMessage] = useState("");
 
   useEffect(() => {
     const sectionIds = navItems.map((item) => item.id);
@@ -141,9 +142,10 @@ export default function PortfolioPage() {
     setFormData((prev) => ({ ...prev, [field]: value }));
     setFormErrors((prev) => ({ ...prev, [field]: undefined }));
     setSubmitState("idle");
+    setResultMessage("");
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const errors = validateForm(formData);
 
@@ -157,21 +159,18 @@ export default function PortfolioPage() {
     setSubmitState("idle");
 
     try {
+      const form = new FormData();
+      form.append("access_key", WEB3FORMS_ACCESS_KEY);
+      form.append("name", formData.name);
+      form.append("email", formData.email);
+      form.append("subject", formData.subject);
+      form.append("message", formData.message);
+      form.append("from_name", profile.name);
+      form.append("botcheck", "false");
+
       const response = await fetch(WEB3FORMS_ENDPOINT, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          from_name: profile.name,
-          botcheck: false
-        })
+        body: form
       });
 
       const result = (await response.json()) as { success?: boolean; message?: string };
@@ -181,9 +180,12 @@ export default function PortfolioPage() {
       }
 
       setSubmitState("success");
+      setResultMessage("Message sent successfully. Thank you for reaching out.");
       setFormData(initialForm);
-    } catch {
+    } catch (error) {
       setSubmitState("error");
+      const message = error instanceof Error ? error.message : "Message delivery failed. Check the Web3Forms access key.";
+      setResultMessage(message);
       setFormErrors((prev) => ({
         ...prev,
         message: prev.message ?? "Message delivery failed. Check the Web3Forms access key."
@@ -742,6 +744,12 @@ export default function PortfolioPage() {
                     "Send Message"
                   )}
                 </button>
+
+                {resultMessage ? (
+                  <p className={`text-sm ${submitState === "success" ? "text-emerald-300" : "text-rose-300"}`}>
+                    {resultMessage}
+                  </p>
+                ) : null}
 
                 <AnimatePresence mode="wait">
                   {submitState === "success" ? (
