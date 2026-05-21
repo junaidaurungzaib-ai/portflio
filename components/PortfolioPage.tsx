@@ -344,8 +344,8 @@ export default function PortfolioPage() {
               </button>
 
               <a
-                href="/Junaid_Aurungzaib_CV.txt"
-                download
+                href="/Junaid_Aurungzaib_CV.pdf"
+                download="Junaid_Aurungzaib_CV.pdf"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-slate-100 transition hover:bg-white/10"
               >
                 Download CV
@@ -694,6 +694,7 @@ export default function PortfolioPage() {
                 ] as const).map((input) => (
                   <label key={input.field} className="relative block">
                     <input
+                      name={input.field}
                       type={input.type}
                       value={formData[input.field]}
                       onChange={(event) => handleChange(input.field, event.target.value)}
@@ -711,6 +712,7 @@ export default function PortfolioPage() {
 
                 <label className="relative block">
                   <textarea
+                    name="message"
                     rows={5}
                     value={formData.message}
                     onChange={(event) => handleChange("message", event.target.value)}
