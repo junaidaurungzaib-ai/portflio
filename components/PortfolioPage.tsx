@@ -672,7 +672,7 @@ export default function PortfolioPage() {
             <div>
               <h2 className="section-title">Contact</h2>
               <p className="mt-3 max-w-md text-slate-300">
-                Open to global collaborations in machine learning, computer vision, and full-stack software engineering, with an emphasis on measurable product impact and technical leadership.
+                Seeking strategic global partnerships in AI, computer vision, and full-stack engineering to deliver measurable product impact, technical excellence, and scalable solutions.
               </p>
 
               <div className="mt-6 space-y-3 text-sm text-slate-300">
