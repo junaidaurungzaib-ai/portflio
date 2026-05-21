@@ -159,18 +159,13 @@ export default function PortfolioPage() {
     setSubmitState("idle");
 
     try {
-      const form = new FormData();
-      form.append("access_key", WEB3FORMS_ACCESS_KEY);
-      form.append("name", formData.name);
-      form.append("email", formData.email);
-      form.append("subject", formData.subject);
-      form.append("message", formData.message);
-      form.append("from_name", profile.name);
-      form.append("botcheck", "false");
+      const formDataPayload = new FormData(event.currentTarget);
+      formDataPayload.append("access_key", WEB3FORMS_ACCESS_KEY);
+      formDataPayload.append("from_name", profile.name);
 
       const response = await fetch(WEB3FORMS_ENDPOINT, {
         method: "POST",
-        body: form
+        body: formDataPayload
       });
 
       const result = (await response.json()) as { success?: boolean; message?: string };
@@ -729,6 +724,16 @@ export default function PortfolioPage() {
                     <small className="mt-1 block text-xs text-rose-300">{formErrors.message}</small>
                   ) : null}
                 </label>
+
+                <input
+                  type="text"
+                  name="botcheck"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  defaultValue=""
+                  aria-hidden="true"
+                  style={{ display: "none" }}
+                />
 
                 <button
                   type="submit"
