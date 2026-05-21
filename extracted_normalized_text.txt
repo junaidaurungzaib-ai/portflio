@@ -1,0 +1,65 @@
+﻿Junaid Aurungzaib
+Phone: +92-315-5159065 junaidaurungzaib@gmail.com
+Location: Islamabad, Pakistán
+Career Overview
+- Quality Assurance expert with 1 year experience in software quality Assurance, Process Automation and fintech applications.
+- Specialized in Manual, Performance and Automated Testing, Stakeholder Management, Requirements elicitation, and Project management via Azure devops and JIRA.
+- Experienced in security relating to data confidentiality and client privacy as it pertains to databases and application design and development
+- Seeking roles related to Quality Assurance and Project Management where I can apply my experience to make a positive impact and contribute to the growth of the company.
+Skills
+Tools: ML, Tensor flow, PyTorch, Keras, Selenium, Selenium IDE, Eclipse, Postman, J-meter, Microsoft Azure, Jira, Confluence, Microsoft Visio, Microsoft Office Suite.
+Soft Skills: Critical Thinking, Teamwork, Problem Solving, Adaptable, customer and user centric, efficient stakeholder management
+Experience
+Federal Urdu University of Arts, Sciences & Technology
+Lab Instructor (October 2025 – Present)
+- Teaching Lab Classes
+- Managing Lab Installations
+Dare Arqam Schools
+Lecturer Computer (March 2023 – Present)
+- Computer Lecturer
+- Evening Coaching classes
+Sultana Foundation
+Lecturer (August 2016 - October 2025)
+- Lab In charge
+- Focal Person (Organizing Events, Seminars, Sports week etc.)
+- Teaching Programming and Communication subjects.
+- Managing Time Table.
+Dartican
+SQA Engineer (June 2023- August 2024)
+- Bug identification and reporting: Identifying bugs and malfunctioning and reporting of bugs in bug reporting tools.
+- Developing Software Manuals and User Guides.
+- Reviewed, analyzed, and ensured the quality of data loaded into the database system by utilizing PL-SQL
+- Generate and run SQL queries to further pinpoint client's data issue and work with third party data vendors to obtain corrected files.
+- Monitored data integrity by performing quality assurance checks on client and partner data.
+- Monthly reporting of Project status.
+- Reviewing and evaluating business processes automations Preparing QA and test plans for test execution and monitoring in project development and test life cycle for ensuring to meet the project deadlines.
+- Productivity and conducting risk analysis.
+- Performing extensive security testing on both web and mobile applications.
+- Working with in open-source performance testing tools for web applications and web services.
+- Creating User stories and managing azure for the entire team.
+- Working with an agile cross functional team and ensuring timely delivery of a bug free product.
+- Load/Stress Testing: Performing load testing wherever required using J-meter.
+- Conducted black box testing on the created product, including various types of testing such as: Functional Testing, Performance testing, User acceptance testing.
+Master Mind Technologies
+Software Developer (Dec 2019 –Jan 2021)
+- WordPress Developer
+- Front End Designing (html, CSS, Java Script)
+- Back End Developer (PHP, Python)
+Education
+Degree: Matric Science
+Institute: Sultana Foundation BHS 2010 - 2012
+Degree: DAE Telecomm
+Institute: Prince Salman Institute of Technology 2012 - 2015
+Degree: Bachelors in Computer Science
+Institute: PMAS Arid Agricultural University Rawalpindi 2016 - 2020
+Degree: Masters in Computer Science
+Institute: Abasyn University Islamabad 2023 - Present
+Certifications
+- Machine Learning/Deep Learning - Air University
+- Oracle Development – Master Mind Technologies
+Hobbies
+- Book Reading
+- Travelling
+- Internet
+References
+- Reference will be furnished on demand.

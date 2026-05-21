@@ -1,0 +1,24 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="brain" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(590 325) rotate(90) scale(195 190)">
+      <stop stop-color="#34D399" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#1F2937" stop-opacity="0.2"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="70" y="70" width="1060" height="660" rx="40" fill="#0B1220" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="130" y="120" width="260" height="40" rx="20" fill="rgba(255,255,255,0.06)"/>
+  <rect x="130" y="190" width="320" height="20" rx="10" fill="#1F2937"/>
+  <rect x="130" y="230" width="200" height="20" rx="10" fill="#1F2937"/>
+  <ellipse cx="760" cy="405" rx="260" ry="205" fill="url(#brain)"/>
+  <path d="M560 320C520 290 495 250 508 218C520 188 558 180 584 196C612 171 654 168 684 192C713 168 762 174 781 210C827 210 860 243 858 287C886 301 903 330 900 362C935 383 955 426 941 469C958 505 954 554 923 583C927 623 896 657 853 660C835 689 800 705 764 698C732 719 689 718 658 696C625 716 580 712 553 690C513 703 467 690 443 657C400 650 368 619 365 578C337 560 323 528 329 495C304 470 298 427 315 394C303 349 322 307 360 285C365 242 397 206 444 198C469 166 511 153 548 161C579 143 620 140 649 156C676 138 715 138 747 155C793 160 828 194 834 238C865 253 886 285 886 321C901 351 902 386 889 413C911 445 918 487 904 522C912 561 899 600 866 625C849 656 818 679 782 684C748 707 705 707 672 690C640 707 597 703 566 685C529 693 489 683 464 654C425 646 395 618 388 580C354 560 334 528 336 490C312 464 304 428 317 395C329 358 355 331 390 320C388 286 402 253 428 233C453 213 489 208 519 217C537 245 560 260 588 270C598 284 586 305 560 320Z" fill="rgba(255,255,255,0.10)"/>
+  <path d="M445 382C495 342 544 332 590 347C637 364 676 397 709 446C733 480 763 506 803 523" stroke="#34D399" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="650" cy="365" r="18" fill="#34D399"/>
+  <circle cx="785" cy="484" r="18" fill="#6366F1"/>
+  <rect x="130" y="650" width="460" height="36" rx="18" fill="rgba(255,255,255,0.07)"/>
+  <rect x="132" y="652" width="270" height="32" rx="16" fill="url(#brain)"/>
+</svg>
