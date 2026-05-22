@@ -694,12 +694,10 @@ export default function PortfolioPage() {
                 transition={{ delay: Math.min(index * 0.05, 0.3) }}
                 className="glass-card overflow-hidden"
               >
-                <img
-                  src={encodeURI(item.image)}
-                  alt={item.title}
-                  loading="lazy"
-                  className="h-52 w-full object-cover"
-                />
+                <div className="h-52 w-full flex items-center justify-center bg-slate-800">
+                  <span className="text-sm text-slate-300">Certificate / Award</span>
+                </div>
+
                 <div className="p-5">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <h3 className="text-base font-semibold text-white">{item.title}</h3>
