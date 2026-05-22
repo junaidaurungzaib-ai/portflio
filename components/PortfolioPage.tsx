@@ -712,15 +712,11 @@ export default function PortfolioPage() {
                 transition={{ delay: Math.min(index * 0.05, 0.3) }}
                 className="glass-card overflow-hidden"
               >
-                <img
-                  src={item.image || honorImageFallback}
-                  alt={item.title}
-                  loading="lazy"
-                  className="h-52 w-full object-cover"
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = honorImageFallback;
-                  }}
-                />
+                <div className="h-52 w-full overflow-hidden rounded-t-3xl border-b border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950">
+                  <div className="flex h-full items-center justify-center px-4 text-center text-sm text-slate-300">
+                    <span>Certificate / Award</span>
+                  </div>
+                </div>
 
                 <div className="p-5">
                   <div className="flex flex-wrap items-center justify-between gap-2">
