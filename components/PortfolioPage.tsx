@@ -409,9 +409,9 @@ export default function PortfolioPage() {
         </section>
 
         <section id="research" className="section-wrap py-16 sm:py-20">
-          <h2 className="section-title">Research and Publications Focus</h2>
+          <h2 className="section-title">Brain tumor detection based on optimized machine learning approach</h2>
           <p className="mt-3 max-w-3xl text-slate-300">
-            Focused on applied machine learning, computer vision, and medical image analysis, with the main research topic centered on optimized brain tumor detection using machine learning.
+            Hybrid model combining CBAM (Convolutional Block Attention Module) with EfficientNet-B3 for feature refinement and robust representation. Achieved an accuracy of 99.31% on the evaluation set.
           </p>
 
           <div className="mt-8 space-y-4">
@@ -694,9 +694,15 @@ export default function PortfolioPage() {
                 transition={{ delay: Math.min(index * 0.05, 0.3) }}
                 className="glass-card overflow-hidden"
               >
-                <div className="h-52 w-full flex items-center justify-center bg-slate-800">
-                  <span className="text-sm text-slate-300">Certificate / Award</span>
-                </div>
+                <img
+                  src={item.image ? encodeURI(item.image) : "https://via.placeholder.com/1200x600?text=Certificate+Image"}
+                  alt={item.title}
+                  loading="lazy"
+                  className="h-52 w-full object-cover"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = "https://via.placeholder.com/1200x600?text=Certificate+Image";
+                  }}
+                />
 
                 <div className="p-5">
                   <div className="flex flex-wrap items-center justify-between gap-2">
