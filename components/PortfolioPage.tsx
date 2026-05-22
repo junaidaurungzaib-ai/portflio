@@ -696,7 +696,7 @@ export default function PortfolioPage() {
               >
                 <img
                   src={encodeURI(item.image)}
-                  alt={item.title)}
+                  alt={item.title}
                   loading="lazy"
                   className="h-52 w-full object-cover"
                 />

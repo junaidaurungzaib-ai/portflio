@@ -264,7 +264,7 @@ export const honorItems = [
     ]
   },
   {
-    title: "Brain Storming Session Conference",
+    title: "Participation in Brain Storming Session",
     organization: "Youth Leadership Forum",
     period: "2024",
     image: "/honor-and-rewards/brainstorming-session.jpg",
@@ -276,14 +276,14 @@ export const honorItems = [
     ]
   },
   {
-    title: "How to Overcome Anxiety in Youth",
+    title: "Participation in How to Overcome Anxiety in Youth",
     organization: "Mental Wellness Conference",
     period: "2024",
     image: "/honor-and-rewards/anxiety-youth-conference.jpg",
     description:
-      "Joined a conference on youth mental health, anxiety management, and practical wellbeing strategies.",
+      "Attended a conference on youth mental health, anxiety management, and wellbeing strategies.",
     details: [
-      "Focused on resilience, stress reduction, and peer support",
+      "Learned practical techniques for anxiety reduction",
       "Certificate of participation in youth mental health awareness"
     ]
   },
@@ -293,10 +293,10 @@ export const honorItems = [
     period: "2024",
     image: "/honor-and-rewards/rise-award-1st-prize.jpg",
     description:
-      "Awarded first prize in the Rise Awards competition for outstanding achievement and innovation.",
+      "Awarded first prize in the Rise Award competition for outstanding achievement and innovation.",
     details: [
-      "Recognized for excellence in performance and execution",
-      "First-place winner among regional nominees"
+      "First-place winner for professional excellence",
+      "Recognized for high-impact project delivery"
     ]
   },
   {
@@ -305,10 +305,10 @@ export const honorItems = [
     period: "2024",
     image: "/honor-and-rewards/first-aid-training.jpg",
     description:
-      "Completed certified first aid training, including CPR, wound care, and emergency response.",
+      "Completed certified first aid training including CPR, wound care, and emergency response.",
     details: [
-      "Practical emergency response and first aid certification",
-      "Prepared to provide immediate care in urgent situations"
+      "Practical first aid and emergency preparedness training",
+      "Certified to provide immediate care in urgent situations"
     ]
   }
 ];
