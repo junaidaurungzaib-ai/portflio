@@ -129,6 +129,24 @@ export default function PortfolioPage() {
     });
   }, []);
 
+  const honorImageFallback = "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80";
+
+  const preparedResearchItems = useMemo(
+    () =>
+      researchItems.map((item, index) => {
+        if (index !== 0) return item;
+        return {
+          ...item,
+          title: "Brain tumor detection based on optimized machine learning approach",
+          abstract:
+            "Hybrid model using CBAM and EfficientNet-B3 for feature refinement and robust representation, achieving 99.31% accuracy.",
+          venue: item.venue || "Research Publication",
+          image: item.image || honorImageFallback
+        };
+      }),
+    [researchItems]
+  );
+
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" });
     setMenuOpen(false);
@@ -409,13 +427,13 @@ export default function PortfolioPage() {
         </section>
 
         <section id="research" className="section-wrap py-16 sm:py-20">
-          <h2 className="section-title">Brain tumor detection based on optimized machine learning approach</h2>
+          <h2 className="section-title">Research and Publications Focus</h2>
           <p className="mt-3 max-w-3xl text-slate-300">
-            Hybrid model combining CBAM (Convolutional Block Attention Module) with EfficientNet-B3 for feature refinement and robust representation. Achieved an accuracy of 99.31% on the evaluation set.
+            Focused on applied machine learning, computer vision, and medical image analysis, with the main research topic centered on optimized brain tumor detection using machine learning.
           </p>
 
           <div className="mt-8 space-y-4">
-            {researchItems.map((item, index) => {
+            {preparedResearchItems.map((item, index) => {
               const isOpen = openResearch === index;
               return (
                 <motion.article
@@ -434,12 +452,12 @@ export default function PortfolioPage() {
                     <div className="flex items-center gap-4">
                       <div
                         className="h-16 w-16 shrink-0 rounded-2xl bg-cover bg-center ring-1 ring-white/10"
-                        style={{ backgroundImage: `url(${item.image})` }}
+                        style={{ backgroundImage: `url(${item.image || honorImageFallback})` }}
                         aria-hidden="true"
                       />
                       <div>
-                      <h3 className="text-base font-semibold text-white">{item.title}</h3>
-                      <p className="mt-1 text-sm text-emerald-300">{item.venue}</p>
+                        <h3 className="text-base font-semibold text-white">{item.title}</h3>
+                        <p className="mt-1 text-sm text-emerald-300">{item.venue}</p>
                       </div>
                     </div>
                     <span className="text-sm text-slate-300">{isOpen ? "Hide" : "Read Abstract"}</span>
@@ -695,12 +713,12 @@ export default function PortfolioPage() {
                 className="glass-card overflow-hidden"
               >
                 <img
-                  src={item.image ? encodeURI(item.image) : "https://via.placeholder.com/1200x600?text=Certificate+Image"}
+                  src={item.image || honorImageFallback}
                   alt={item.title}
                   loading="lazy"
                   className="h-52 w-full object-cover"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = "https://via.placeholder.com/1200x600?text=Certificate+Image";
+                    (e.currentTarget as HTMLImageElement).src = honorImageFallback;
                   }}
                 />
 
