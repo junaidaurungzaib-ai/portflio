@@ -118,6 +118,16 @@ export default function PortfolioPage() {
     return projectItems.filter((project) => project.category === filter);
   }, [filter]);
 
+  const uniqueExperienceItems = useMemo(() => {
+    const seen = new Set<string>();
+    return experienceItems.filter((item) => {
+      const key = `${item.title}|${item.organization}|${item.period}|${item.details.join("|")}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" });
     setMenuOpen(false);
@@ -567,7 +577,7 @@ export default function PortfolioPage() {
           <h2 className="section-title">Professional Experience</h2>
 
           <div className="mt-8 relative border-l border-white/15 pl-6 sm:pl-8">
-            {experienceItems.map((item, index) => (
+            {uniqueExperienceItems.map((item, index) => (
               <motion.article
                 key={`${item.title}-${item.organization}-${index}`}
                 initial={{ opacity: 0, x: 20 }}
