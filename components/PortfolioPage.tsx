@@ -20,7 +20,8 @@ import {
   skillCloud,
   experienceItems,
   educationItems,
-  certificationItems
+  certificationItems,
+  honorItems
 } from "@/data/portfolioData";
 
 const filterOptions = ["All", "Web Apps", "AI/ML", "Mobile"] as const;
@@ -673,6 +674,45 @@ export default function PortfolioPage() {
               >
                 {skill}
               </span>
+            ))}
+          </div>
+        </section>
+
+        <section id="honors" className="section-wrap py-16 sm:py-20 border-t border-white/10">
+          <h2 className="section-title">Honors and Rewards</h2>
+          <p className="mt-3 max-w-3xl text-slate-300">
+            Certificates and awards demonstrating professional recognition, event participation, and training credentials.
+          </p>
+
+          <div className="mt-8 grid gap-5 xl:grid-cols-2">
+            {honorItems.map((item, index) => (
+              <motion.article
+                key={`${item.title}-${item.organization}-${index}`}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.35 }}
+                transition={{ delay: Math.min(index * 0.05, 0.3) }}
+                className="glass-card overflow-hidden"
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="h-52 w-full object-cover"
+                />
+                <div className="p-5">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <h3 className="text-base font-semibold text-white">{item.title}</h3>
+                    <span className="text-xs text-slate-400">{item.period}</span>
+                  </div>
+                  <p className="mt-1 text-sm text-emerald-300">{item.organization}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-slate-300">{item.description}</p>
+                  <ul className="mt-4 space-y-1.5 text-sm text-slate-300">
+                    {item.details.map((detail) => (
+                      <li key={detail}>- {detail}</li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.article>
             ))}
           </div>
         </section>
