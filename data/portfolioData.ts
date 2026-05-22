@@ -254,19 +254,19 @@ export const honorItems = [
   {
     title: "Attending International WHO Conference",
     organization: "World Health Organization",
-    period: "2024",
+    period: "2021",
     image: "/honor-and-rewards/who-conference.jpg",
     description:
       "Attended the WHO international conference on global health, pandemic preparedness, and cross-border public health collaboration.",
     details: [
       "Certificate of attendance from WHO",
       "Topics covered: pandemic response, health systems, international cooperation"
-    ]
+    ] 
   },
   {
     title: "Participation in Brain Storming Session",
     organization: "Youth Leadership Forum",
-    period: "2024",
+    period: "2021",
     image: "/honor-and-rewards/brainstorming-session.jpg",
     description:
       "Participated in a brainstorming conference focused on creative problem solving, teamwork, and innovation strategy.",
@@ -278,7 +278,7 @@ export const honorItems = [
   {
     title: "Participation in How to Overcome Anxiety in Youth",
     organization: "Mental Wellness Conference",
-    period: "2024",
+    period: "2022",
     image: "/honor-and-rewards/anxiety-youth-conference.jpg",
     description:
       "Attended a conference on youth mental health, anxiety management, and wellbeing strategies.",
@@ -290,7 +290,7 @@ export const honorItems = [
   {
     title: "1st Prize in Rise Award",
     organization: "Rise Awards",
-    period: "2024",
+    period: "2021",
     image: "/honor-and-rewards/rise-award-1st-prize.jpg",
     description:
       "Awarded first prize in the Rise Award competition for outstanding achievement and innovation.",
@@ -302,7 +302,7 @@ export const honorItems = [
   {
     title: "First Aid Training Certificate",
     organization: "First Aid Training Institute",
-    period: "2024",
+    period: "2015",
     image: "/honor-and-rewards/first-aid-training.jpg",
     description:
       "Completed certified first aid training including CPR, wound care, and emergency response.",
