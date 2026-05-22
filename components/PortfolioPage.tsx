@@ -695,8 +695,9 @@ export default function PortfolioPage() {
                 className="glass-card overflow-hidden"
               >
                 <img
-                  src={item.image}
-                  alt={item.title}
+                  src={encodeURI(item.image)}
+                  alt={item.title)}
+                  loading="lazy"
                   className="h-52 w-full object-cover"
                 />
                 <div className="p-5">
