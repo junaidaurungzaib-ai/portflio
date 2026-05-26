@@ -310,5 +310,6 @@ export const honorItems = [
       "Practical first aid and emergency preparedness training",
       "Certified to provide immediate care in urgent situations"
     ]
+    
   }
 ];
